@@ -1,0 +1,1290 @@
+[
+    {
+        "query": "select 明星id from 离异明星 where 离异时间（年） < 2002",
+        "db_id": "明星关系",
+        "question": "在2002年之前离异的明星有哪些？",
+        "question_id": "qid000001",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            10,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 子女数量 from 离异明星 where 离异时间（年） < 2002",
+        "db_id": "明星关系",
+        "question": "在2002年之前离异的明星分别有多少个子女？",
+        "question_id": "qid000002",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 = 2",
+        "db_id": "明星关系",
+        "question": "哪些明星的配偶也是明星且只有两个孩子？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+        "question_id": "qid000003",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ],
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": [
+                    [
+                        0,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            1,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 = 2 and 明星夫妻.结婚时间（年） < 2010",
+        "db_id": "明星关系",
+        "question": "哪些明星在2010年之前结婚且他们的配偶也是明星且只有两个孩子？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+        "question_id": "qid000004",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ],
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": [
+                    [
+                        0,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            1,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ],
+                "and",
+                [
+                    0,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    2010.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 > 2 and 明星夫妻.结婚时间（年） < 2010",
+        "db_id": "明星关系",
+        "question": "哪些明星在2010年之前结婚且他们的配偶也是明星且有两个以上子女？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+        "question_id": "qid000005",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ],
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": [
+                    [
+                        0,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            1,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ],
+                "and",
+                [
+                    0,
+                    4,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    2010.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 > 2 and 明星夫妻.结婚时间（年） > 2010",
+        "db_id": "明星关系",
+        "question": "哪些明星在2010年之后结婚且他们的配偶也是明星且有两个以上子女？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+        "question_id": "qid000006",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ],
+                    [
+                        "table_unit",
+                        1
+                    ]
+                ],
+                "conds": [
+                    [
+                        0,
+                        2,
+                        [
+                            0,
+                            [
+                                0,
+                                6,
+                                false
+                            ],
+                            null
+                        ],
+                        [
+                            0,
+                            1,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            3,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            9,
+                            false
+                        ],
+                        null
+                    ],
+                    2.0,
+                    null
+                ],
+                "and",
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            8,
+                            false
+                        ],
+                        null
+                    ],
+                    2010.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 姓名 from 明星 where 毕业时间（年） = 2002",
+        "db_id": "明星关系",
+        "question": "在2002年毕业的有哪些明星？",
+        "question_id": "qid000007",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） = 2002",
+        "db_id": "明星关系",
+        "question": "在2002年毕业的有哪些明星？他们分别毕业于哪些院校？",
+        "question_id": "qid000008",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） = 2002 order by 年龄（岁） asc limit 3",
+        "db_id": "明星关系",
+        "question": "在2002年毕业的有哪些明星？把他们的毕业院校也说说，按照年龄升序排列，只列出前三个。",
+        "question_id": "qid000009",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "limit": 3,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） != 2002 order by 年龄（岁） asc limit 3",
+        "db_id": "明星关系",
+        "question": "不在2002年毕业的有哪些明星？把他们的毕业院校也说说，按照年龄升序排列，只列出前三个。",
+        "question_id": "qid000010",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        0
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            2,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            4,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    7,
+                    [
+                        0,
+                        [
+                            0,
+                            5,
+                            false
+                        ],
+                        null
+                    ],
+                    2002.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                3,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "limit": 3,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星id from 离异明星 order by 离异时间（年） asc",
+        "db_id": "明星关系",
+        "question": "把那些离异的明星按照离异时间的先后顺序排列一下吧。",
+        "question_id": "qid000011",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            10,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select 明星id, 配偶id from 离异明星 order by 离异时间（年） asc",
+        "db_id": "明星关系",
+        "question": "把那些离异的明星按照离异时间的先后顺序排列一下吧，顺便告诉我他们的配偶是谁。",
+        "question_id": "qid000012",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            10,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    0,
+                    [
+                        0,
+                        [
+                            0,
+                            11,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [
+                "asc",
+                [
+                    [
+                        0,
+                        [
+                            0,
+                            [
+                                0,
+                                12,
+                                false
+                            ],
+                            null
+                        ]
+                    ]
+                ]
+            ],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select count(*) from 离异明星 where 子女数量 > 0",
+        "db_id": "明星关系",
+        "question": "有多少明星夫妻有了子女还离异？",
+        "question_id": "qid000013",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            0,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ],
+                    0.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select avg(子女数量) from 离异明星 where 子女数量 > 0",
+        "db_id": "明星关系",
+        "question": "有了子女还离异的明星夫妻平均有多少子女？",
+        "question_id": "qid000014",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    5,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ],
+                    0.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select max(离异时间（年）), min(离异时间（年）) from 离异明星 where 子女数量 > 0",
+        "db_id": "明星关系",
+        "question": "有了子女还离异的明星夫妻最早和最晚的离异时间是什么时候？",
+        "question_id": "qid000015",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    1,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ],
+                    0.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    },
+    {
+        "query": "select max(离异时间（年）), min(离异时间（年）) from 离异明星 where 子女数量 > 0 and 离异时间（年） > 2008",
+        "db_id": "明星关系",
+        "question": "有了子女且在零八年之后离异的明星夫妻中，最早和最晚的离异时间是什么时候？",
+        "question_id": "qid000016",
+        "sql": {
+            "from": {
+                "table_units": [
+                    [
+                        "table_unit",
+                        2
+                    ]
+                ],
+                "conds": []
+            },
+            "select": [
+                [
+                    1,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ]
+                ],
+                [
+                    2,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ]
+                ]
+            ],
+            "where": [
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            13,
+                            false
+                        ],
+                        null
+                    ],
+                    0.0,
+                    null
+                ],
+                "and",
+                [
+                    0,
+                    3,
+                    [
+                        0,
+                        [
+                            0,
+                            12,
+                            false
+                        ],
+                        null
+                    ],
+                    2008.0,
+                    null
+                ]
+            ],
+            "groupBy": [],
+            "having": [],
+            "orderBy": [],
+            "limit": null,
+            "intersect": null,
+            "union": null,
+            "except": null
+        }
+    }
+]

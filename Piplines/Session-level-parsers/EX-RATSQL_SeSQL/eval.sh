@@ -1,0 +1,1 @@
+python scripts/eval.py --config configs/duorat/duorat-finetune-bert-large.jsonnet --section test --inferred ./logdir/duorat-sesql-single-round-bert-base-max-step-100000-1/test-output-1000 --output ./logdir/duorat-sesql-single-round-bert-base-max-step-100000-1/test-output-1000.eval.json

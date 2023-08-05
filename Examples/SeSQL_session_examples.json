@@ -1,0 +1,2070 @@
+[
+    {
+        "database_id": "明星关系",
+        "interaction": [
+            {
+                "contextual_phenomena": [
+                    "Independent"
+                ],
+                "query": "select 明星id from 离异明星 where 离异时间（年） < 2002",
+                "query_toks_no_value": [
+                    "select",
+                    "明星id",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "离异时间（年）",
+                    "<",
+                    "value"
+                ],
+                "utterance": "在2002年之前离异的明星有哪些？",
+                "no_context_utterance": "",
+                "transfer_way": "",
+                "utterance_toks": [
+                    "在",
+                    "2002",
+                    "年",
+                    "之",
+                    "前",
+                    "离",
+                    "异",
+                    "的",
+                    "明",
+                    "星",
+                    "有",
+                    "哪",
+                    "些",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    10,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            4,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col from tab where col op val",
+                "category": ""
+            },
+            {
+                "contextual_phenomena": [
+                    "Coreference"
+                ],
+                "query": "select 子女数量 from 离异明星 where 离异时间（年） < 2002",
+                "query_toks_no_value": [
+                    "select",
+                    "子女数量",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "离异时间（年）",
+                    "<",
+                    "value"
+                ],
+                "utterance": "他们都有多少个子女？",
+                "no_context_utterance": "在2002年之前离异的明星分别有多少个子女？",
+                "transfer_way": "replace element",
+                "utterance_toks": [
+                    "他",
+                    "们",
+                    "都",
+                    "有",
+                    "多",
+                    "少",
+                    "个",
+                    "子",
+                    "女",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            4,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col from tab where col op val",
+                "category": "Changing SELECT"
+            },
+            {
+                "contextual_phenomena": [
+                    "Independent"
+                ],
+                "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 = 2",
+                "query_toks_no_value": [
+                    "select",
+                    "明星",
+                    ".",
+                    "姓名",
+                    ",",
+                    "明星",
+                    ".",
+                    "年龄（岁）",
+                    ",",
+                    "明星",
+                    ".",
+                    "毕业时间（年）",
+                    ",",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "from",
+                    "明星",
+                    "join",
+                    "明星夫妻",
+                    "on",
+                    "明星夫妻",
+                    ".",
+                    "明星id",
+                    "=",
+                    "明星",
+                    ".",
+                    "词条id",
+                    "where",
+                    "明星夫妻",
+                    ".",
+                    "子女数量",
+                    "=",
+                    "value"
+                ],
+                "utterance": "哪些明星的配偶也是明星且只有两个孩子？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+                "no_context_utterance": "",
+                "transfer_way": "add table",
+                "utterance_toks": [
+                    "哪",
+                    "些",
+                    "明",
+                    "星",
+                    "的",
+                    "配",
+                    "偶",
+                    "也",
+                    "是",
+                    "明",
+                    "星",
+                    "且",
+                    "只",
+                    "有",
+                    "两",
+                    "个",
+                    "孩",
+                    "子",
+                    "？",
+                    "告",
+                    "诉",
+                    "我",
+                    "他",
+                    "们",
+                    "都",
+                    "几",
+                    "岁",
+                    "了",
+                    "，",
+                    "什",
+                    "么",
+                    "时",
+                    "候",
+                    "毕",
+                    "业",
+                    "，",
+                    "什",
+                    "么",
+                    "时",
+                    "候",
+                    "结",
+                    "婚",
+                    "的",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ],
+                            [
+                                "table_unit",
+                                1
+                            ]
+                        ],
+                        "conds": [
+                            [
+                                0,
+                                2,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        6,
+                                        false
+                                    ],
+                                    null
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    9,
+                                    false
+                                ],
+                                null
+                            ],
+                            2.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col, col, col from tab join tab where col op val",
+                "category": "Changing tables"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 = 2 and 明星夫妻.结婚时间（年） < 2010",
+                "query_toks_no_value": [
+                    "select",
+                    "明星",
+                    ".",
+                    "姓名",
+                    ",",
+                    "明星",
+                    ".",
+                    "年龄（岁）",
+                    ",",
+                    "明星",
+                    ".",
+                    "毕业时间（年）",
+                    ",",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "from",
+                    "明星",
+                    "join",
+                    "明星夫妻",
+                    "on",
+                    "明星夫妻",
+                    ".",
+                    "明星id",
+                    "=",
+                    "明星",
+                    ".",
+                    "词条id",
+                    "where",
+                    "明星夫妻",
+                    ".",
+                    "子女数量",
+                    "=",
+                    "value",
+                    "and",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "<",
+                    "value"
+                ],
+                "utterance": "如果要求在2010年之前结婚，结果又是如何呢？",
+                "no_context_utterance": "哪些明星在2010年之前结婚且他们的配偶也是明星且只有两个孩子？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+                "transfer_way": "add element",
+                "utterance_toks": [
+                    "如",
+                    "果",
+                    "要",
+                    "求",
+                    "在",
+                    "2010",
+                    "年",
+                    "之",
+                    "前",
+                    "结",
+                    "婚",
+                    "，",
+                    "结",
+                    "果",
+                    "又",
+                    "是",
+                    "如",
+                    "何",
+                    "呢",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ],
+                            [
+                                "table_unit",
+                                1
+                            ]
+                        ],
+                        "conds": [
+                            [
+                                0,
+                                2,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        6,
+                                        false
+                                    ],
+                                    null
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    9,
+                                    false
+                                ],
+                                null
+                            ],
+                            2.0,
+                            null
+                        ],
+                        "and",
+                        [
+                            0,
+                            4,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ],
+                            2010.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col, col, col from tab join tab where col op val cond_rel col op val",
+                "category": "Changing conditions"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 > 2 and 明星夫妻.结婚时间（年） < 2010",
+                "query_toks_no_value": [
+                    "select",
+                    "明星",
+                    ".",
+                    "姓名",
+                    ",",
+                    "明星",
+                    ".",
+                    "年龄（岁）",
+                    ",",
+                    "明星",
+                    ".",
+                    "毕业时间（年）",
+                    ",",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "from",
+                    "明星",
+                    "join",
+                    "明星夫妻",
+                    "on",
+                    "明星夫妻",
+                    ".",
+                    "明星id",
+                    "=",
+                    "明星",
+                    ".",
+                    "词条id",
+                    "where",
+                    "明星夫妻",
+                    ".",
+                    "子女数量",
+                    ">",
+                    "value",
+                    "and",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "<",
+                    "value"
+                ],
+                "utterance": "如果把子女数量等于两个换成有两个以上子女呢？",
+                "no_context_utterance": "哪些明星在2010年之前结婚且他们的配偶也是明星且有两个以上子女？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+                "transfer_way": "replace element",
+                "utterance_toks": [
+                    "如",
+                    "果",
+                    "把",
+                    "子",
+                    "女",
+                    "数",
+                    "量",
+                    "等",
+                    "于",
+                    "两",
+                    "个",
+                    "换",
+                    "成",
+                    "有",
+                    "两",
+                    "个",
+                    "以",
+                    "上",
+                    "子",
+                    "女",
+                    "呢",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ],
+                            [
+                                "table_unit",
+                                1
+                            ]
+                        ],
+                        "conds": [
+                            [
+                                0,
+                                2,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        6,
+                                        false
+                                    ],
+                                    null
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    9,
+                                    false
+                                ],
+                                null
+                            ],
+                            2.0,
+                            null
+                        ],
+                        "and",
+                        [
+                            0,
+                            4,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ],
+                            2010.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col, col, col from tab join tab where col op val cond_rel col op val",
+                "category": "Changing conditions"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select 明星.姓名, 明星.年龄（岁）, 明星.毕业时间（年）, 明星夫妻.结婚时间（年） from 明星 join 明星夫妻 on 明星夫妻.明星id = 明星.词条id where 明星夫妻.子女数量 > 2 and 明星夫妻.结婚时间（年） > 2010",
+                "query_toks_no_value": [
+                    "select",
+                    "明星",
+                    ".",
+                    "姓名",
+                    ",",
+                    "明星",
+                    ".",
+                    "年龄（岁）",
+                    ",",
+                    "明星",
+                    ".",
+                    "毕业时间（年）",
+                    ",",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    "from",
+                    "明星",
+                    "join",
+                    "明星夫妻",
+                    "on",
+                    "明星夫妻",
+                    ".",
+                    "明星id",
+                    "=",
+                    "明星",
+                    ".",
+                    "词条id",
+                    "where",
+                    "明星夫妻",
+                    ".",
+                    "子女数量",
+                    ">",
+                    "value",
+                    "and",
+                    "明星夫妻",
+                    ".",
+                    "结婚时间（年）",
+                    ">",
+                    "value"
+                ],
+                "utterance": "结婚时间也换一下吧，换成2010年之后结婚的，麻烦你再告诉我一下结果。",
+                "no_context_utterance": "哪些明星在2010年之后结婚且他们的配偶也是明星且有两个以上子女？告诉我他们都几岁了，什么时候毕业，什么时候结婚的。",
+                "transfer_way": "replace element",
+                "utterance_toks": [
+                    "结",
+                    "婚",
+                    "时",
+                    "间",
+                    "也",
+                    "换",
+                    "一",
+                    "下",
+                    "吧",
+                    "，",
+                    "换",
+                    "成",
+                    "2010",
+                    "年",
+                    "之",
+                    "后",
+                    "结",
+                    "婚",
+                    "的",
+                    "，",
+                    "麻",
+                    "烦",
+                    "你",
+                    "再",
+                    "告",
+                    "诉",
+                    "我",
+                    "一",
+                    "下",
+                    "结",
+                    "果",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ],
+                            [
+                                "table_unit",
+                                1
+                            ]
+                        ],
+                        "conds": [
+                            [
+                                0,
+                                2,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        6,
+                                        false
+                                    ],
+                                    null
+                                ],
+                                [
+                                    0,
+                                    1,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    3,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    9,
+                                    false
+                                ],
+                                null
+                            ],
+                            2.0,
+                            null
+                        ],
+                        "and",
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    8,
+                                    false
+                                ],
+                                null
+                            ],
+                            2010.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col, col, col from tab join tab where col op val cond_rel col op val",
+                "category": "Changing conditions"
+            },
+            {
+                "contextual_phenomena": [
+                    "Independent"
+                ],
+                "query": "select 姓名 from 明星 where 毕业时间（年） = 2002",
+                "query_toks_no_value": [
+                    "select",
+                    "姓名",
+                    "from",
+                    "明星",
+                    "where",
+                    "毕业时间（年）",
+                    "=",
+                    "value"
+                ],
+                "utterance": "在2002年毕业的有哪些明星？",
+                "no_context_utterance": "",
+                "transfer_way": "no context",
+                "utterance_toks": [
+                    "在",
+                    "2002",
+                    "年",
+                    "毕",
+                    "业",
+                    "的",
+                    "有",
+                    "哪",
+                    "些",
+                    "明",
+                    "星",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col from tab where col op val",
+                "category": "Unrelated"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis",
+                    "Coreference"
+                ],
+                "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） = 2002",
+                "query_toks_no_value": [
+                    "select",
+                    "姓名",
+                    ",",
+                    "毕业院校",
+                    "from",
+                    "明星",
+                    "where",
+                    "毕业时间（年）",
+                    "=",
+                    "value"
+                ],
+                "utterance": "把他们的毕业院校也说说。",
+                "no_context_utterance": "在2002年毕业的有哪些明星？他们分别毕业于哪些院校？",
+                "transfer_way": "add element",
+                "utterance_toks": [
+                    "把",
+                    "他",
+                    "们",
+                    "的",
+                    "毕",
+                    "业",
+                    "院",
+                    "校",
+                    "也",
+                    "说",
+                    "说",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col from tab where col op val",
+                "category": "Changing SELECT"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） = 2002 order by 年龄（岁） asc limit 3",
+                "query_toks_no_value": [
+                    "select",
+                    "姓名",
+                    ",",
+                    "毕业院校",
+                    "from",
+                    "明星",
+                    "where",
+                    "毕业时间（年）",
+                    "=",
+                    "value",
+                    "order",
+                    "by",
+                    "年龄（岁）",
+                    "asc",
+                    "limit",
+                    "value"
+                ],
+                "utterance": "将结果按照年龄升序排列，只列出前三个。",
+                "no_context_utterance": "在2002年毕业的有哪些明星？把他们的毕业院校也说说，按照年龄升序排列，只列出前三个。",
+                "transfer_way": "add clause",
+                "utterance_toks": [
+                    "将",
+                    "结",
+                    "果",
+                    "按",
+                    "照",
+                    "年",
+                    "龄",
+                    "升",
+                    "序",
+                    "排",
+                    "列",
+                    "，",
+                    "只",
+                    "列",
+                    "出",
+                    "前",
+                    "三",
+                    "个",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [
+                        "asc",
+                        [
+                            [
+                                0,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        3,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ]
+                    ],
+                    "limit": 3,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col from tab where col op val order dir col limit value",
+                "category": "Changing display"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） != 2002 order by 年龄（岁） asc limit 3",
+                "query_toks_no_value": [
+                    "select",
+                    "姓名",
+                    ",",
+                    "毕业院校",
+                    "from",
+                    "明星",
+                    "where",
+                    "毕业时间（年）",
+                    "!=",
+                    "value",
+                    "order",
+                    "by",
+                    "年龄（岁）",
+                    "asc",
+                    "limit",
+                    "value"
+                ],
+                "utterance": "我改主意了，我现在想知道不是2002年毕业的那些明星是什么情况。",
+                "no_context_utterance": "不在2002年毕业的有哪些明星？把他们的毕业院校也说说，按照年龄升序排列，只列出前三个。",
+                "transfer_way": "replace element",
+                "utterance_toks": [
+                    "我",
+                    "改",
+                    "主",
+                    "意",
+                    "了",
+                    "，",
+                    "我",
+                    "现",
+                    "在",
+                    "想",
+                    "知",
+                    "道",
+                    "不",
+                    "是",
+                    "2002",
+                    "年",
+                    "毕",
+                    "业",
+                    "的",
+                    "那",
+                    "些",
+                    "明",
+                    "星",
+                    "是",
+                    "什",
+                    "么",
+                    "情",
+                    "况",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                0
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    2,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    4,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            7,
+                            [
+                                0,
+                                [
+                                    0,
+                                    5,
+                                    false
+                                ],
+                                null
+                            ],
+                            2002.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [
+                        "asc",
+                        [
+                            [
+                                0,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        3,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ]
+                    ],
+                    "limit": 3,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col from tab where col op val order dir col limit value",
+                "category": "Changing conditions"
+            }
+        ],
+        "final": {
+            "query": "select 姓名, 毕业院校 from 明星 where 毕业时间（年） != 2002 order by 年龄（岁） asc limit 3",
+            "utterance": "我改主意了，我现在想知道不是2002年毕业的那些明星是什么情况。"
+        }
+    },
+    {
+        "database_id": "明星关系",
+        "interaction": [
+            {
+                "contextual_phenomena": [
+                    "Independent"
+                ],
+                "query": "select 明星id from 离异明星 order by 离异时间（年） asc",
+                "query_toks_no_value": [
+                    "select",
+                    "明星id",
+                    "from",
+                    "离异明星",
+                    "order",
+                    "by",
+                    "离异时间（年）",
+                    "asc"
+                ],
+                "utterance": "把那些离异的明星按照离异时间的先后顺序排列一下吧。",
+                "no_context_utterance": "",
+                "transfer_way": "",
+                "utterance_toks": [
+                    "把",
+                    "那",
+                    "些",
+                    "离",
+                    "异",
+                    "的",
+                    "明",
+                    "星",
+                    "按",
+                    "照",
+                    "离",
+                    "异",
+                    "时",
+                    "间",
+                    "的",
+                    "先",
+                    "后",
+                    "顺",
+                    "序",
+                    "排",
+                    "列",
+                    "一",
+                    "下",
+                    "吧",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    10,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [
+                        "asc",
+                        [
+                            [
+                                0,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        12,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ]
+                    ],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col from tab order dir col",
+                "category": ""
+            },
+            {
+                "contextual_phenomena": [
+                    "Coreference"
+                ],
+                "query": "select 明星id, 配偶id from 离异明星 order by 离异时间（年） asc",
+                "query_toks_no_value": [
+                    "select",
+                    "明星id",
+                    ",",
+                    "配偶id",
+                    "from",
+                    "离异明星",
+                    "order",
+                    "by",
+                    "离异时间（年）",
+                    "asc"
+                ],
+                "utterance": "他们的配偶是谁呢？也说一下吧。",
+                "no_context_utterance": "把那些离异的明星按照离异时间的先后顺序排列一下吧，顺便告诉我他们的配偶是谁。",
+                "transfer_way": "add element",
+                "utterance_toks": [
+                    "他",
+                    "们",
+                    "的",
+                    "配",
+                    "偶",
+                    "是",
+                    "谁",
+                    "呢",
+                    "？",
+                    "也",
+                    "说",
+                    "一",
+                    "下",
+                    "吧",
+                    "。"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    10,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            0,
+                            [
+                                0,
+                                [
+                                    0,
+                                    11,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [
+                        "asc",
+                        [
+                            [
+                                0,
+                                [
+                                    0,
+                                    [
+                                        0,
+                                        12,
+                                        false
+                                    ],
+                                    null
+                                ]
+                            ]
+                        ]
+                    ],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select col, col from tab order dir col",
+                "category": "Changing SELECT"
+            },
+            {
+                "contextual_phenomena": [
+                    "Independent"
+                ],
+                "query": "select count(*) from 离异明星 where 子女数量 > 0",
+                "query_toks_no_value": [
+                    "select",
+                    "count",
+                    "(",
+                    "*",
+                    ")",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "子女数量",
+                    ">",
+                    "value"
+                ],
+                "utterance": "有多少明星夫妻有了子女还离异？",
+                "no_context_utterance": "",
+                "transfer_way": "no context",
+                "utterance_toks": [
+                    "有",
+                    "多",
+                    "少",
+                    "明",
+                    "星",
+                    "夫",
+                    "妻",
+                    "有",
+                    "了",
+                    "子",
+                    "女",
+                    "还",
+                    "离",
+                    "异",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    0,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ],
+                            0.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select agg(*) from tab where col op val",
+                "category": "Unrelated"
+            },
+            {
+                "contextual_phenomena": [
+                    "Coreference"
+                ],
+                "query": "select avg(子女数量) from 离异明星 where 子女数量 > 0",
+                "query_toks_no_value": [
+                    "select",
+                    "avg",
+                    "(",
+                    "子女数量",
+                    ")",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "子女数量",
+                    ">",
+                    "value"
+                ],
+                "utterance": "我还想知道他们平均有多少子女？",
+                "no_context_utterance": "有了子女还离异的明星夫妻平均有多少子女？",
+                "transfer_way": "replace element",
+                "utterance_toks": [
+                    "我",
+                    "还",
+                    "想",
+                    "知",
+                    "道",
+                    "他",
+                    "们",
+                    "平",
+                    "均",
+                    "有",
+                    "多",
+                    "少",
+                    "子",
+                    "女",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            5,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ],
+                            0.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select agg(col) from tab where col op val",
+                "category": "Changing SELECT"
+            },
+            {
+                "contextual_phenomena": [
+                    "Coreference"
+                ],
+                "query": "select max(离异时间（年）), min(离异时间（年）) from 离异明星 where 子女数量 > 0",
+                "query_toks_no_value": [
+                    "select",
+                    "max",
+                    "(",
+                    "离异时间（年）",
+                    ")",
+                    ",",
+                    "min",
+                    "(",
+                    "离异时间（年）",
+                    ")",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "子女数量",
+                    ">",
+                    "value"
+                ],
+                "utterance": "那他们中最早和最晚的离异时间是什么时候？",
+                "no_context_utterance": "有了子女还离异的明星夫妻最早和最晚的离异时间是什么时候？",
+                "transfer_way": "add element",
+                "utterance_toks": [
+                    "那",
+                    "他",
+                    "们",
+                    "中",
+                    "最",
+                    "早",
+                    "和",
+                    "最",
+                    "晚",
+                    "的",
+                    "离",
+                    "异",
+                    "时",
+                    "间",
+                    "是",
+                    "什",
+                    "么",
+                    "时",
+                    "候",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            1,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ],
+                            0.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select agg(col), agg(col) from tab where col op val",
+                "category": "Changing SELECT"
+            },
+            {
+                "contextual_phenomena": [
+                    "Ellipsis"
+                ],
+                "query": "select max(离异时间（年）), min(离异时间（年）) from 离异明星 where 子女数量 > 0 and 离异时间（年） > 2008",
+                "query_toks_no_value": [
+                    "select",
+                    "max",
+                    "(",
+                    "离异时间（年）",
+                    ")",
+                    ",",
+                    "min",
+                    "(",
+                    "离异时间（年）",
+                    ")",
+                    "from",
+                    "离异明星",
+                    "where",
+                    "子女数量",
+                    ">",
+                    "value",
+                    "and",
+                    "离异时间（年）",
+                    ">",
+                    "value"
+                ],
+                "utterance": "如果还要求是在零八年之后离异的呢？",
+                "no_context_utterance": "有了子女且在零八年之后离异的明星夫妻中，最早和最晚的离异时间是什么时候？",
+                "transfer_way": "add element",
+                "utterance_toks": [
+                    "如",
+                    "果",
+                    "还",
+                    "要",
+                    "求",
+                    "是",
+                    "在",
+                    "零",
+                    "八",
+                    "年",
+                    "之",
+                    "后",
+                    "离",
+                    "异",
+                    "的",
+                    "呢",
+                    "？"
+                ],
+                "sql": {
+                    "from": {
+                        "table_units": [
+                            [
+                                "table_unit",
+                                2
+                            ]
+                        ],
+                        "conds": []
+                    },
+                    "select": [
+                        [
+                            1,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ]
+                        ],
+                        [
+                            2,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ]
+                        ]
+                    ],
+                    "where": [
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    13,
+                                    false
+                                ],
+                                null
+                            ],
+                            0.0,
+                            null
+                        ],
+                        "and",
+                        [
+                            0,
+                            3,
+                            [
+                                0,
+                                [
+                                    0,
+                                    12,
+                                    false
+                                ],
+                                null
+                            ],
+                            2008.0,
+                            null
+                        ]
+                    ],
+                    "groupBy": [],
+                    "having": [],
+                    "orderBy": [],
+                    "limit": null,
+                    "intersect": null,
+                    "union": null,
+                    "except": null
+                },
+                "sql_pattern": "select agg(col), agg(col) from tab where col op val cond_rel col op val",
+                "category": "Changing conditions"
+            }
+        ],
+        "final": {
+            "query": "select max(离异时间（年）), min(离异时间（年）) from 离异明星 where 子女数量 > 0 and 离异时间（年） > 2008",
+            "utterance": "如果还要求是在零八年之后离异的呢？"
+        }
+    }
+]
