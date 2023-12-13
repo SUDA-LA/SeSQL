@@ -1,5 +1,0 @@
-export CUDA_VISIBLE_DEVICES=1
-python scripts/infer.py --logdir ./logdir/duorat-sesql-bert-follow-dependency-expand-max-length/ --output ./logdir/duorat-sesql-single-round-bert-base-max-step-100000/infer-output
-#nohup  python -u scripts/infer.py --logdir ./logdir/duorat-sesql-bert-wwm-follow-dependency-expand-max-length/ --output ./logdir/duorat-sesql-bert-wwm-follow-dependency-expand-max-length/my_inference_test_best_output --section test  > ./log/duorat_sesql_bert_wwm_follow_dependency_expand_max_length_eval.log 2>&1 &
-#export CUDA_VISIBLE_DEVICES=4
-#nohup  python -u scripts/infer.py --logdir ./logdir/duorat-sesql-bert-wwm-three-turn-expand-max-length/ --output ./logdir/duorat-sesql-bert-wwm-three-turn-expand-max-length/my_inference_test_best_output --section test  > ./log/duorat_sesql_bert_wwm_three_turn_expand_max_length_eval.log 2>&1 &

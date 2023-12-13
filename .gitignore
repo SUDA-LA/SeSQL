@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Traning model and data.
+SeSQL_data_removefrom/
+bert_cn/
+bert-base-chinese/
+SeSQL/
+save_*
+*.bin
+
+# Incompleted code
+session-level-parser-RATSQL-EX/
+
 # C extensions
 *.so
 
@@ -56,7 +67,7 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
+# *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
