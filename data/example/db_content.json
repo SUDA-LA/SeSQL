@@ -1,0 +1,195 @@
+[
+    {
+        "db_id": "明星关系",
+        "tables": {
+            "明星": {
+                "cell": [
+                    [
+                        "item_entertainment_19_226",
+                        "郝蕾",
+                        "30",
+                        "北京电影学院",
+                        "2002"
+                    ],
+                    [
+                        "item_entertainment_19_227",
+                        "孙俪",
+                        "45",
+                        "中央戏剧学院",
+                        "2008"
+                    ],
+                    [
+                        "item_entertainment_19_228",
+                        "邓超",
+                        "45",
+                        "上海戏剧学院",
+                        "2008"
+                    ],
+                    [
+                        "item_entertainment_19_229",
+                        "文章",
+                        "30",
+                        "北京广播电视大学",
+                        "2002"
+                    ],
+                    [
+                        "item_entertainment_19_230",
+                        "马伊琍",
+                        "45",
+                        "中国传媒大学",
+                        "2008"
+                    ]
+                ],
+                "header": [
+                    "词条id",
+                    "姓名",
+                    "年龄（岁）",
+                    "毕业院校",
+                    "毕业时间（年）"
+                ],
+                "table_name": "明星",
+                "type": [
+                    "number",
+                    "text",
+                    "number",
+                    "text",
+                    "number"
+                ]
+            },
+            "明星夫妻": {
+                "cell": [
+                    [
+                        "item_entertainment_19_230",
+                        "item_entertainment_19_228",
+                        "2002",
+                        "1"
+                    ],
+                    [
+                        "item_entertainment_19_228",
+                        "item_entertainment_19_226",
+                        "2014",
+                        "2"
+                    ],
+                    [
+                        "item_entertainment_19_230",
+                        "item_entertainment_19_227",
+                        "2014",
+                        "2"
+                    ],
+                    [
+                        "item_entertainment_19_229",
+                        "item_entertainment_19_227",
+                        "2014",
+                        "2"
+                    ],
+                    [
+                        "item_entertainment_19_230",
+                        "item_entertainment_19_230",
+                        "2002",
+                        "2"
+                    ]
+                ],
+                "header": [
+                    "明星id",
+                    "配偶id",
+                    "结婚时间（年）",
+                    "子女数量"
+                ],
+                "table_name": "明星夫妻",
+                "type": [
+                    "number",
+                    "number",
+                    "number",
+                    "number"
+                ]
+            },
+            "明星好友": {
+                "cell": [
+                    [
+                        "item_entertainment_19_228",
+                        "item_entertainment_19_227",
+                        "同学"
+                    ],
+                    [
+                        "item_entertainment_19_228",
+                        "item_entertainment_19_228",
+                        "合作伙伴"
+                    ],
+                    [
+                        "item_entertainment_19_229",
+                        "item_entertainment_19_226",
+                        "同学"
+                    ],
+                    [
+                        "item_entertainment_19_228",
+                        "item_entertainment_19_230",
+                        "合作伙伴"
+                    ],
+                    [
+                        "item_entertainment_19_226",
+                        "item_entertainment_19_226",
+                        "合作伙伴"
+                    ]
+                ],
+                "header": [
+                    "明星id",
+                    "好友id",
+                    "关系"
+                ],
+                "table_name": "明星好友",
+                "type": [
+                    "number",
+                    "number",
+                    "text"
+                ]
+            },
+            "离异明星": {
+                "cell": [
+                    [
+                        "item_entertainment_19_227",
+                        "item_entertainment_19_226",
+                        "2002",
+                        "0"
+                    ],
+                    [
+                        "item_entertainment_19_227",
+                        "item_entertainment_19_226",
+                        "2014",
+                        "2"
+                    ],
+                    [
+                        "item_entertainment_19_227",
+                        "item_entertainment_19_228",
+                        "2002",
+                        "0"
+                    ],
+                    [
+                        "item_entertainment_19_230",
+                        "item_entertainment_19_229",
+                        "2002",
+                        "2"
+                    ],
+                    [
+                        "item_entertainment_19_228",
+                        "item_entertainment_19_229",
+                        "2002",
+                        "0"
+                    ]
+                ],
+                "header": [
+                    "明星id",
+                    "配偶id",
+                    "离异时间（年）",
+                    "子女数量"
+                ],
+                "table_name": "离异明星",
+                "type": [
+                    "number",
+                    "number",
+                    "number",
+                    "number"
+                ]
+            }
+        }
+    }
+]  

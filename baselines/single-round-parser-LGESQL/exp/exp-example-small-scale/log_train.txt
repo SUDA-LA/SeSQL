@@ -1,0 +1,65 @@
+2023-12-02 17:17:12,926 - Initialization finished ...
+2023-12-02 17:17:12,926 - Output path is exp/task_LGESQL_SeSQL_Bert__model_lgesql_view_mmc_gp_0.15/plm_bert-base-chinese__gnn_512_x_8__head_8__share__dp_0.2__dpa_0.0__dpc_0.2__bs_20__lr_0.0001_ld_0.8__l2_0.1__wp_0.1__sd_linear__me_200__mn_5.0__bm_5__seed_999
+2023-12-02 17:17:12,926 - Random seed is set to 999
+2023-12-02 17:17:12,926 - Use GPU with index 6
+2023-12-02 17:23:29,416 - Load dataset and database finished, cost 376.4898s ...
+2023-12-02 17:23:29,417 - Dataset size: train -> 21454 ; dev -> 2279 ; test -> 3279
+2023-12-02 17:23:44,992 - Total training steps: 214600;	 Warmup steps: 21460
+2023-12-02 18:06:33,993 - Training: 	Epoch: 0	Time: 2568.9880	Training loss: 777001.6046/313720.3973
+2023-12-02 18:50:46,075 - Training: 	Epoch: 1	Time: 2613.7732	Training loss: 268384.6375/274774.0523
+2023-12-02 19:34:16,483 - Training: 	Epoch: 2	Time: 2582.7006	Training loss: 183556.6952/261763.1747
+2023-12-02 20:52:33,232 - Training: 	Epoch: 3	Time: 4665.1647	Training loss: 119345.0304/254556.5481
+2023-12-02 22:22:44,608 - Training: 	Epoch: 4	Time: 5299.2631	Training loss: 90598.7880/250271.2321
+2023-12-03 00:03:01,970 - Training: 	Epoch: 5	Time: 5924.6549	Training loss: 71559.5506/247898.3471
+2023-12-03 01:16:11,245 - Training: 	Epoch: 6	Time: 4284.9470	Training loss: 56636.1378/246143.2436
+2023-12-03 01:59:57,178 - Training: 	Epoch: 7	Time: 2600.8020	Training loss: 46514.4512/245113.5211
+2023-12-03 02:45:34,967 - Training: 	Epoch: 8	Time: 2706.6672	Training loss: 39287.2723/244251.5968
+2023-12-03 03:29:39,028 - Training: 	Epoch: 9	Time: 2614.0844	Training loss: 33959.6806/243715.3168
+2023-12-03 04:14:02,253 - Training: 	Epoch: 10	Time: 2633.8007	Training loss: 30128.2968/243288.6346
+2023-12-03 04:57:34,003 - Training: 	Epoch: 11	Time: 2577.8210	Training loss: 27086.3436/242934.3939
+2023-12-03 05:40:48,854 - Training: 	Epoch: 12	Time: 2569.8551	Training loss: 24629.2725/242579.3555
+2023-12-03 06:22:57,132 - Training: 	Epoch: 13	Time: 2508.3036	Training loss: 22596.8947/242507.7136
+2023-12-03 07:00:24,512 - Training: 	Epoch: 14	Time: 2228.8036	Training loss: 21172.8560/242217.0488
+2023-12-03 07:37:54,549 - Training: 	Epoch: 15	Time: 2231.9780	Training loss: 19973.5371/242053.9324
+2023-12-03 08:15:01,584 - Training: 	Epoch: 16	Time: 2209.6387	Training loss: 18895.3331/241960.1086
+2023-12-03 08:52:02,859 - Training: 	Epoch: 17	Time: 2205.1408	Training loss: 17730.7616/241807.3945
+2023-12-03 09:29:02,975 - Training: 	Epoch: 18	Time: 2203.7011	Training loss: 16820.6563/241739.5814
+2023-12-03 10:06:03,523 - Training: 	Epoch: 19	Time: 2203.4047	Training loss: 16235.2240/241615.6289
+2023-12-03 10:43:04,574 - Training: 	Epoch: 20	Time: 2204.9508	Training loss: 15116.3198/241497.4047
+2023-12-03 11:20:33,981 - Training: 	Epoch: 21	Time: 2233.6290	Training loss: 13416.6956/241267.3833
+2023-12-03 12:02:02,805 - Training: 	Epoch: 22	Time: 2471.5863	Training loss: 12819.5245/241123.2369
+2023-12-03 12:45:07,272 - Training: 	Epoch: 23	Time: 2564.0376	Training loss: 11508.6889/241059.0353
+2023-12-03 13:26:56,621 - Training: 	Epoch: 24	Time: 2489.7762	Training loss: 10433.8686/240909.7463
+2023-12-03 14:09:48,152 - Training: 	Epoch: 25	Time: 2549.8903	Training loss: 9788.0006/240835.2475
+2023-12-03 14:52:00,757 - Training: 	Epoch: 26	Time: 2513.0787	Training loss: 9134.7335/240673.4946
+2023-12-03 15:33:58,821 - Training: 	Epoch: 27	Time: 2497.2380	Training loss: 8495.9785/240624.0992
+2023-12-03 16:16:29,866 - Training: 	Epoch: 28	Time: 2529.7375	Training loss: 7876.1001/240540.4130
+2023-12-03 16:54:25,205 - Training: 	Epoch: 29	Time: 2258.5852	Training loss: 7301.7366/240534.3541
+2023-12-03 17:33:32,073 - Training: 	Epoch: 30	Time: 2328.8841	Training loss: 7375.2725/240433.0673
+2023-12-03 18:18:37,417 - Training: 	Epoch: 31	Time: 2678.9549	Training loss: 6328.0419/240380.9371
+2023-12-03 19:03:11,246 - Training: 	Epoch: 32	Time: 2648.1232	Training loss: 6206.4881/240345.5406
+2023-12-03 19:41:14,837 - Training: 	Epoch: 33	Time: 2260.3697	Training loss: 6058.4209/240266.1640
+2023-12-03 20:18:42,835 - Training: 	Epoch: 34	Time: 2229.6584	Training loss: 5545.7380/240188.9550
+2023-12-03 20:56:28,371 - Training: 	Epoch: 35	Time: 2248.1724	Training loss: 5506.5807/240185.4087
+2023-12-03 21:33:56,895 - Training: 	Epoch: 36	Time: 2230.9294	Training loss: 5144.0507/240185.3211
+2023-12-03 22:12:00,058 - Training: 	Epoch: 37	Time: 2265.3881	Training loss: 4911.2514/240126.0632
+2023-12-03 23:33:53,415 - Training: 	Epoch: 38	Time: 4895.6285	Training loss: 4689.0675/240083.2016
+2023-12-04 01:34:13,688 - Training: 	Epoch: 39	Time: 7134.9015	Training loss: 4514.3247/240053.0433
+2023-12-04 02:58:26,269 - Training: 	Epoch: 40	Time: 4974.4594	Training loss: 4364.6765/239993.4959
+2023-12-04 04:20:13,786 - Training: 	Epoch: 41	Time: 4847.6225	Training loss: 3997.8836/239972.0423
+2023-12-04 05:41:22,660 - Training: 	Epoch: 42	Time: 4827.7876	Training loss: 3808.7912/239975.3359
+2023-12-04 06:57:46,480 - Training: 	Epoch: 43	Time: 4539.0818	Training loss: 4026.5039/239976.8596
+2023-12-04 08:14:48,348 - Training: 	Epoch: 44	Time: 4573.8029	Training loss: 3676.3449/239944.7199
+2023-12-04 08:58:57,032 - Training: 	Epoch: 45	Time: 2614.1888	Training loss: 3578.2668/239956.1491
+2023-12-04 09:42:04,616 - Training: 	Epoch: 46	Time: 2567.4514	Training loss: 3551.7726/239925.8501
+2023-12-04 10:31:09,502 - Training: 	Epoch: 47	Time: 2925.8236	Training loss: 3316.5742/239881.6606
+2023-12-04 11:20:58,431 - Training: 	Epoch: 48	Time: 2956.4469	Training loss: 2982.6312/239885.1963
+2023-12-04 12:01:59,381 - Training: 	Epoch: 49	Time: 2441.2523	Training loss: 3193.1733/239856.1925
+2023-12-04 12:41:39,182 - Training: 	Epoch: 50	Time: 2362.6122	Training loss: 2975.6435/239848.2187
+2023-12-04 13:23:04,644 - Training: 	Epoch: 51	Time: 2464.3477	Training loss: 3228.1936/239865.5944
+2023-12-04 14:01:41,446 - Training: 	Epoch: 52	Time: 2294.1285	Training loss: 2844.0626/239838.1879
+2023-12-04 14:39:27,267 - Training: 	Epoch: 53	Time: 2248.3625	Training loss: 2629.6792/239797.2129
+2023-12-04 15:17:06,741 - Training: 	Epoch: 54	Time: 2241.9621	Training loss: 2747.8447/239872.9981
+2023-12-04 15:55:02,373 - Training: 	Epoch: 55	Time: 2257.7199	Training loss: 2393.7678/239789.3105
+2023-12-04 16:35:19,610 - Training: 	Epoch: 56	Time: 2397.4622	Training loss: 2337.7285/239771.1855
+2023-12-04 17:17:46,441 - Training: 	Epoch: 57	Time: 2527.6805	Training loss: 2182.7429/239753.4103

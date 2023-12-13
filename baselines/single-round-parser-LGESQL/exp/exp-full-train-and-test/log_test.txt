@@ -1,0 +1,9 @@
+2023-02-28 23:52:33,770 - Initialization finished ...
+2023-02-28 23:52:33,770 - Output path is ./exp/task_LGESQL_SeSQL_BERT__model_lgesql_view_mmc_gp_0.15/plm_bert-base-chinese__gnn_512_x_8__head_8__share__dp_0.2__dpa_0.0__dpc_0.2__bs_16__lr_0.0001_ld_0.8__l2_0.1__wp_0.1__sd_linear__me_250__mn_5.0__bm_5__seed_100
+2023-02-28 23:52:33,770 - Random seed is set to 999
+2023-02-28 23:52:33,770 - Use GPU with index 4
+2023-02-28 23:53:55,489 - Load dataset and database finished, cost 81.7183s ...
+2023-02-28 23:53:55,489 - Dataset size: dev -> 2279 ; test -> 3279
+2023-02-28 23:54:05,339 - Load saved model from path: ./exp/task_LGESQL_SeSQL_BERT__model_lgesql_view_mmc_gp_0.15/plm_bert-base-chinese__gnn_512_x_8__head_8__share__dp_0.2__dpa_0.0__dpc_0.2__bs_16__lr_0.0001_ld_0.8__l2_0.1__wp_0.1__sd_linear__me_250__mn_5.0__bm_5__seed_100
+2023-03-01 00:02:48,798 - Evaluation costs 523.46s ; Dev dataset exact match/checker is 0.7806/0.7828 .
+2023-03-01 00:15:38,111 - Evaluation costs 769.31s ; Test dataset exact match/checker is 0.7118/0.7149 .
