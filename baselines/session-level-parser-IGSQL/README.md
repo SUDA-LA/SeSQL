@@ -30,7 +30,9 @@ Put the SeSQL data under `data/SeSQL`.
 Make sure the `entities.txt` is under `data/`. 
 
 Run the preprocess code
+
 > cd data/SeSQL && python generate_split_ids.py
+> 
 > cd ../.. && python run/preprocess.py --dataset SeSQL --remove_from
 
 - to train the model with editsql: run `bash scripts/train.sh`. We saved our experimental logs at `log/`. 
