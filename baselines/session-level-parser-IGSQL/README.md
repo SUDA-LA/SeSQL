@@ -35,5 +35,5 @@ Run the preprocess code
 > 
 > cd ../.. && python run/preprocess.py --dataset SeSQL --remove_from
 
-- to train the model with editsql: run `bash scripts/train.sh`. We saved our experimental logs at `log/`. 
+- to train the model with editsql: run `bash scripts/train.sh`. We saved our experimental logs at `exp/`. 
 - to evaluate the best model: run `bash scripts/evaluate.sh`.
