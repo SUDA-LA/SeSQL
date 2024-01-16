@@ -7,7 +7,6 @@ __pycache__/
 SeSQL_data_removefrom/
 bert_cn/
 bert-base-chinese/
-SeSQL/
 save_*
 *.bin
 
