@@ -13,7 +13,7 @@ conda activate igsql
 pip install -r requirements.txt
 ```
 
-Download pretrained BERT model from [here](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip) and put `bert_model.ckpt.data-00000-of-00001` into `model/bert_cn/`.
+Download pretrained BERT model from [here](https://drive.google.com/file/d/1NhxSQuk7JIaW0gC9WaNwTKgEInW8GLkX/view?usp=drive_link) and put the unzip dir `bert_cn/` under `model/`.
 
 ```
 export BERT_BASE_DIR=moder/bert_cn

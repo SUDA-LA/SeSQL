@@ -3,3 +3,5 @@ sqlparse
 pymysql
 progressbar
 nltk
+numpy
+six
